@@ -24,11 +24,11 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 36
+      "__id__": 32
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 31
+      "__id__": 33
     },
     "_id": "07365de5-83e5-4b7b-8997-d222a877e9d8"
   },
@@ -137,9 +137,6 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 27
-      },
-      {
         "__id__": 28
       },
       {
@@ -147,6 +144,9 @@
       },
       {
         "__id__": 30
+      },
+      {
+        "__id__": 31
       }
     ],
     "_prefab": null,
@@ -782,6 +782,9 @@
       },
       {
         "__id__": 25
+      },
+      {
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -969,6 +972,28 @@
     "customEventData": ""
   },
   {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 21
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "playOnLoad": true,
+    "_clips": [
+      {
+        "__uuid__": "42838c86-e468-4fac-9a31-91ddfacb5135",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": {
+      "__uuid__": "42838c86-e468-4fac-9a31-91ddfacb5135",
+      "__expectedType__": "cc.AnimationClip"
+    },
+    "_id": "e8MvrkQadETrh02IzmHLol"
+  },
+  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -1048,22 +1073,36 @@
     "_id": "61vl2ldehIOpsx3kflxjB7"
   },
   {
+    "__type__": "cc.PrefabInfo",
+    "fileId": "07365de5-83e5-4b7b-8997-d222a877e9d8"
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 32
-    },
-    "shadows": {
-      "__id__": 33
-    },
-    "_skybox": {
       "__id__": 34
     },
-    "fog": {
+    "shadows": {
       "__id__": 35
+    },
+    "_skybox": {
+      "__id__": 36
+    },
+    "fog": {
+      "__id__": 37
+    },
+    "octree": {
+      "__id__": 38
     }
   },
   {
     "__type__": "cc.AmbientInfo",
+    "_skyColorHDR": {
+      "__type__": "cc.Vec4",
+      "x": 0.2,
+      "y": 0.5019607843137255,
+      "z": 0.8,
+      "w": 0.520833125
+    },
     "_skyColor": {
       "__type__": "cc.Vec4",
       "x": 0.2,
@@ -1071,7 +1110,15 @@
       "z": 0.8,
       "w": 0.520833125
     },
+    "_skyIllumHDR": 20000,
     "_skyIllum": 20000,
+    "_groundAlbedoHDR": {
+      "__type__": "cc.Vec4",
+      "x": 0.2,
+      "y": 0.2,
+      "z": 0.2,
+      "w": 1
+    },
     "_groundAlbedo": {
       "__type__": "cc.Vec4",
       "x": 0.2,
@@ -1086,29 +1133,14 @@
       "z": 0.8,
       "w": 0.520833125
     },
-    "_skyColorHDR": {
-      "__type__": "cc.Vec4",
-      "x": 0.2,
-      "y": 0.5019607843137255,
-      "z": 0.8,
-      "w": 0.520833125
-    },
+    "_skyIllumLDR": 0.78125,
     "_groundAlbedoLDR": {
       "__type__": "cc.Vec4",
       "x": 0.2,
       "y": 0.2,
       "z": 0.2,
       "w": 1
-    },
-    "_groundAlbedoHDR": {
-      "__type__": "cc.Vec4",
-      "x": 0.2,
-      "y": 0.2,
-      "z": 0.2,
-      "w": 1
-    },
-    "_skyIllumLDR": 0.78125,
-    "_skyIllumHDR": 20000
+    }
   },
   {
     "__type__": "cc.ShadowsInfo",
@@ -1128,6 +1160,7 @@
       "b": 76,
       "a": 255
     },
+    "_firstSetCSM": false,
     "_fixedArea": false,
     "_pcf": 0,
     "_bias": 0.00001,
@@ -1143,20 +1176,19 @@
       "x": 512,
       "y": 512
     },
-    "_saturation": 0.75,
-    "_firstSetCSM": false
+    "_saturation": 0.75
   },
   {
     "__type__": "cc.SkyboxInfo",
+    "_applyDiffuseMap": false,
+    "_envmapHDR": null,
     "_envmap": null,
+    "_envmapLDR": null,
+    "_diffuseMapHDR": null,
+    "_diffuseMapLDR": null,
     "_enabled": false,
     "_useIBL": false,
-    "_useHDR": true,
-    "_envmapLDR": null,
-    "_envmapHDR": null,
-    "_diffuseMapLDR": null,
-    "_diffuseMapHDR": null,
-    "_applyDiffuseMap": false
+    "_useHDR": true
   },
   {
     "__type__": "cc.FogInfo",
@@ -1178,7 +1210,20 @@
     "_accurate": false
   },
   {
-    "__type__": "cc.PrefabInfo",
-    "fileId": "07365de5-83e5-4b7b-8997-d222a877e9d8"
+    "__type__": "cc.OctreeInfo",
+    "_enabled": false,
+    "_minPos": {
+      "__type__": "cc.Vec3",
+      "x": -1024,
+      "y": -1024,
+      "z": -1024
+    },
+    "_maxPos": {
+      "__type__": "cc.Vec3",
+      "x": 1024,
+      "y": 1024,
+      "z": 1024
+    },
+    "_depth": 8
   }
 ]
